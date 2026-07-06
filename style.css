@@ -2571,7 +2571,7 @@ body.modal-open {
   font-weight: 400;
 }
 
-.contact-row i {
+.contact-row > i {
   position: relative;
   justify-self: end;
   width: 64px;
@@ -2581,7 +2581,7 @@ body.modal-open {
   transition: 0.35s ease;
 }
 
-.contact-row i::after {
+.contact-row > i::after {
   content: "";
   position: absolute;
   right: 0;
@@ -2598,7 +2598,7 @@ body.modal-open {
   color: var(--sage);
 }
 
-.contact-row:hover i {
+.contact-row:hover > i {
   width: 92px;
   opacity: 1;
 }
@@ -2705,7 +2705,7 @@ body.modal-open {
     font-size: 17px;
   }
 
-  .contact-row i {
+  .contact-row > i {
     width: 38px;
   }
 }
@@ -2800,8 +2800,10 @@ body.modal-open {
   text-transform: uppercase;
 
   color: rgba(255, 255, 255, 0.55);
+}
 
-  margin-bottom: 12px;
+.footer-column > span {
+  margin-bottom: 10px;
 }
 
 .footer-column a,
@@ -2962,4 +2964,59 @@ body.modal-open {
   .floating-telegram img {
     width: 38px;
   }
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(111, 133, 111, 0.12);
+  color: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.contact-row:hover .contact-icon {
+  background: var(--sage);
+  color: #fff;
+}
+
+.footer-column a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.footer-column a i {
+  width: 20px;
+  text-align: center;
+  color: var(--sage);
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.footer-column a:hover i {
+  transform: scale(1.15);
+  color: var(--sage-dark);
+}
+
+.footer-column a {
+  margin-bottom: 10px;
 }
